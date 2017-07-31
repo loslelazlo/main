@@ -24,9 +24,14 @@ var mapOptions = {
 
 var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
-layers[0] = new google.maps.KmlLayer({url: 'https://raw.githubusercontent.com/loslelazlo/main/master/ColoniasZapopan.kml',
+layers[3] = new google.maps.KmlLayer({url: 'https://raw.githubusercontent.com/loslelazlo/main/master/LimiteCiudaddelosNiños.kml',
     map: map});
-
+layers[0] = new google.maps.KmlLayer({url: 'https://raw.githubusercontent.com/loslelazlo/main/master/Luminariasciudaddelosniños.kml',
+    map: map});
+layers[2] = new google.maps.KmlLayer({url: 'https://raw.githubusercontent.com/loslelazlo/main/master/CircuitosCiudaddelosNiños.kml',
+    map: map});
+layers[1] = new google.maps.KmlLayer({url: 'https://raw.githubusercontent.com/loslelazlo/main/master/ControladoresCiudaddelosniños.kml',
+    map: map});
 }
 
 
@@ -63,7 +68,7 @@ function Click(i) {
 
 <!-- Top container -->
 <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i> �Menu</button>
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
   <span class="w3-bar-item w3-right" id="logo" >Logo</span>
 </div>
 
@@ -91,7 +96,7 @@ function Click(i) {
 
        <select class="w3-select" name="option2">
         <option value="" disabled selected>  Search by Colony</option>
-        <option value="1">CEIBAS</option>
+        <option value="1">CIUDAD DE LOS NIÑOS</option>
         <option value="2">PUNTA DE OTERO</option>
         <option value="3">COTO FIRENZZE</option>
         <option value="4">PUNTA DE OTERO</option>
@@ -112,7 +117,7 @@ function Click(i) {
     <h5>Devices</h5>
   </div>
   <div class="w3-bar-block">
-    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>� Close Menu</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
 
     
     <a onclick="myAccFunc('demoAcc')" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
@@ -241,24 +246,24 @@ function Click(i) {
       <div class="w3-twothird">
        <h5>Regions        
 
-
+            <!-- BOTONES DERECHOS DEL MAPA -->
             <button class="w3-button w3-text-black w3-medium"  style="float: right;" onclick="Click(0);">
                <i class="fa fa-lightbulb-o"></i>
             </button>
-            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(0);">
+            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(1);">
                <i class="material-icons">router</i>
             </button>
-            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(0);">
+            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(2);">
                <i class="fa fa-code-fork"></i>
             </button>
-            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(0);">
+            <button class="w3-button w3-text-black w3-medium" style="float: right;" onclick="Click(3);">
                <i class="fa fa-map-o"></i>
             </button>
 
          </h5>
 
    
-
+        <!-- MAPA GOOGLEMAPS -->
         <div id="map" style="width:100%;height:350px;background:yellow"></div>
         <!--<img src="/w3images/region.jpg" style="width:100%" alt="Google Regional Map">-->
       </div>
