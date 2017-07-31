@@ -5,9 +5,9 @@
     <Style id="icon-1708-880E4F-nodesc-normal">
       <IconStyle>
         <color>ff4f0e88</color>
-        <scale>1</scale>
+        <scale>0.5</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>http://maps.google.com/mapfiles/kml/pal4/icon60.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
@@ -20,9 +20,9 @@
     <Style id="icon-1708-880E4F-nodesc-highlight">
       <IconStyle>
         <color>ff4f0e88</color>
-        <scale>1</scale>
+        <scale>0.5</scale>
         <Icon>
-          <href>http://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+          <href>http://http://maps.google.com/mapfiles/kml/pal4/icon60.png</href>
         </Icon>
       </IconStyle>
       <LabelStyle>
