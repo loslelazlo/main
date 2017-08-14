@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Base Act 110817</name>
+		<Style id='Style2-point-1'>
+			<IconStyle>
+				<color>ff0000ff</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-point-1-hover'>
+			<IconStyle>
+				<color>ff0000ff</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+				</Icon>
+			</IconStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-point-1-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-point-1</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-point-1-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='Style2-line-2'>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>800000ff</color>
+				<width>2</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-line-2-hover'>
+			<LineStyle>
+				<color>800000ff</color>
+				<width>2</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-line-2-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-line-2</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-line-2-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='Style2-polygon-3'>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>000000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-polygon-3-hover'>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>000000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-polygon-3-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-polygon-3</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-polygon-3-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Placemark>
+			<name>CIUDAD DE LOS NINOS</name>
+			<snippet></snippet>
+			<description><![CDATA[<div class="googft-info-window">
+<b>description:</b> descripción: descripción:  name: CIUDAD DE LOS NINOS<br> description: CIUDAD DE LOS NINOS    <br>       <br>   FID   623    <br>   NOMBRE   CIUDAD DE LOS NINOS<br> Luminarias35: 178 <br>Luminarias35: 178<br>Luminarias35: 178<br>
+<b>name:</b> CIUDAD DE LOS NINOS<br>
+<b>descripción:</b> descripción:  name: CIUDAD DE LOS NINOS
+ description: CIUDAD DE LOS NINOS    
+       
+   FID   623    
+   NOMBRE   CIUDAD DE LOS NINOS
+ Luminarias35: 178 
+Luminarias35: 178<br>
+<b>Luminarias35:</b> 178
+</div>]]></description>
+			<styleUrl>#Style2-polygon-3-map</styleUrl>
+			<ExtendedData>
+				<Data name='descripción'>
+					<value>descripción:  name: CIUDAD DE LOS NINOS
+ description: CIUDAD DE LOS NINOS    
+       
+   FID   623    
+   NOMBRE   CIUDAD DE LOS NINOS
+ Luminarias35: 178 
+Luminarias35: 178</value>
+				</Data>
+				<Data name='Luminarias35'>
+					<value>178</value>
+				</Data>
+			</ExtendedData><Polygon><outerBoundaryIs><LinearRing><coordinates>-103.408831,20.66527,0.0 -103.409918,20.665065,0.0 -103.410936,20.664855,0.0 -103.411577,20.664733,0.0 -103.412232,20.664609,0.0 -103.413065,20.66445,0.0 -103.414849,20.664111,0.0 -103.415229,20.664039,0.0 -103.415541,20.663979,0.0 -103.415735,20.663942,0.0 -103.415508,20.66311,0.0 -103.415478,20.662809,0.0 -103.416006,20.661789,0.0 -103.416059,20.661568,0.0 -103.41607,20.66152,0.0 -103.414336,20.661231,0.0 -103.414107,20.661321,0.0 -103.413832,20.660653,0.0 -103.413719,20.660379,0.0 -103.413489,20.659822,0.0 -103.413224,20.65918,0.0 -103.412735,20.659318,0.0 -103.412632,20.659387,0.0 -103.411457,20.659832,0.0 -103.410379,20.66019,0.0 -103.40881,20.660777,0.0 -103.408712,20.660813,0.0 -103.408074,20.661045,0.0 -103.407093,20.661402,0.0 -103.407487,20.662275,0.0 -103.407943,20.663283,0.0 -103.408393,20.664279,0.0 -103.408793,20.665164,0.0 -103.408831,20.66527,0.0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+	</Document>
+</kml>

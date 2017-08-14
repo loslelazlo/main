@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<kml xmlns='http://www.opengis.net/kml/2.2'>
+	<Document>
+		<name>Base Act 110817</name>
+		<Style id='Style2-point-1'>
+			<IconStyle>
+				<color>ff0000ff</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+				</Icon>
+			</IconStyle>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-point-1-hover'>
+			<IconStyle>
+				<color>ff0000ff</color>
+				<scale>1.0</scale>
+				<Icon>
+					<href>http://maps.google.com/mapfiles/kml/shapes/placemark_circle.png</href>
+				</Icon>
+			</IconStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-point-1-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-point-1</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-point-1-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='Style2-line-2'>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>800000ff</color>
+				<width>2</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-line-2-hover'>
+			<LineStyle>
+				<color>800000ff</color>
+				<width>2</width>
+			</LineStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-line-2-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-line-2</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-line-2-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Style id='Style2-polygon-3'>
+			<LabelStyle>
+				<scale>0.0</scale>
+			</LabelStyle>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>000000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<Style id='Style2-polygon-3-hover'>
+			<LineStyle>
+				<color>ff000000</color>
+				<width>1</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>000000ff</color>
+			</PolyStyle>
+			<BalloonStyle>
+				<text>$[description]</text>
+			</BalloonStyle>
+		</Style>
+		<StyleMap id='Style2-polygon-3-map'>
+			<Pair>
+				<key>normal</key>
+				<styleUrl>#Style2-polygon-3</styleUrl>
+			</Pair>
+			<Pair>
+				<key>highlight</key>
+				<styleUrl>#Style2-polygon-3-hover</styleUrl>
+			</Pair>
+		</StyleMap>
+		<Placemark>
+			<name>LOMA BONITA</name>
+			<snippet></snippet>
+			<description><![CDATA[<div class="googft-info-window">
+<b>description:</b> descripción: descripción:  name: LOMA BONITA<br> description: LOMA BONITA    <br>       <br>   FID   625    <br>   NOMBRE   LOMA BONITA<br> Luminarias35: 359 <br>Luminarias35: 359<br>Luminarias35: 359<br>
+<b>name:</b> LOMA BONITA<br>
+<b>descripción:</b> descripción:  name: LOMA BONITA
+ description: LOMA BONITA    
+       
+   FID   625    
+   NOMBRE   LOMA BONITA
+ Luminarias35: 359 
+Luminarias35: 359<br>
+<b>Luminarias35:</b> 359
+</div>]]></description>
+			<styleUrl>#Style2-polygon-3-map</styleUrl>
+			<ExtendedData>
+				<Data name='descripción'>
+					<value>descripción:  name: LOMA BONITA
+ description: LOMA BONITA    
+       
+   FID   625    
+   NOMBRE   LOMA BONITA
+ Luminarias35: 359 
+Luminarias35: 359</value>
+				</Data>
+				<Data name='Luminarias35'>
+					<value>359</value>
+				</Data>
+			</ExtendedData><Polygon><outerBoundaryIs><LinearRing><coordinates>-103.411234,20.643424,0.0 -103.411795,20.643072,0.0 -103.41192,20.641827,0.0 -103.411723,20.641779,0.0 -103.411835,20.640677,0.0 -103.409885,20.640505,0.0 -103.410857,20.639029,0.0 -103.411498,20.638057,0.0 -103.411607,20.637891,0.0 -103.411518,20.636931,0.0 -103.410382,20.637162,0.0 -103.409368,20.636348,0.0 -103.408891,20.635965,0.0 -103.408882,20.635899,0.0 -103.408802,20.635317,0.0 -103.408793,20.635249,0.0 -103.40812,20.634746,0.0 -103.407922,20.635686,0.0 -103.407684,20.637359,0.0 -103.407649,20.637602,0.0 -103.405554,20.637335,0.0 -103.404577,20.637202,0.0 -103.403897,20.63709,0.0 -103.402689,20.636218,0.0 -103.40262,20.63605,0.0 -103.40212,20.635983,0.0 -103.402092,20.636174,0.0 -103.401655,20.635848,0.0 -103.400393,20.634907,0.0 -103.399824,20.635213,0.0 -103.399328,20.635479,0.0 -103.398222,20.636108,0.0 -103.397822,20.636335,0.0 -103.397115,20.636737,0.0 -103.396793,20.636921,0.0 -103.396881,20.637086,0.0 -103.39699,20.637326,0.0 -103.397039,20.63757,0.0 -103.397028,20.637829,0.0 -103.396996,20.638019,0.0 -103.396922,20.638187,0.0 -103.397693,20.63856,0.0 -103.400099,20.63965,0.0 -103.402216,20.640647,0.0 -103.403566,20.641293,0.0 -103.40444,20.641703,0.0 -103.405786,20.642131,0.0 -103.405905,20.641864,0.0 -103.405952,20.641811,0.0 -103.405972,20.641607,0.0 -103.406013,20.641347,0.0 -103.406472,20.641421,0.0 -103.407073,20.641519,0.0 -103.407143,20.641568,0.0 -103.407453,20.64177,0.0 -103.408397,20.642357,0.0 -103.408553,20.642518,0.0 -103.408671,20.642639,0.0 -103.411234,20.643424,0.0</coordinates></LinearRing></outerBoundaryIs></Polygon></Placemark>
+	</Document>
+</kml>
