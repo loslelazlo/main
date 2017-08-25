@@ -1,0 +1,208 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+#slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style>    
+
+
+</head>
+
+<body>
+
+  <div class="w3-row">
+     <div class="w3-col m4">
+        <div class="w3-margin-left"><h5>Available Devices at NW Server<h5></div>
+        <div class="w3-container w3-small" style="margin-top:0%; width: 100%; margin-left:0%; height: 80px; overflow-y: auto">
+          
+          <table class="w3-table w3-striped w3-white w3-small">
+            <tr>
+              <th>Dev EUI</td>
+            </tr>
+            <tr>
+              <td onclick="click1('02:FC:F8:CC:04:EA:31:98');">02:FC:F8:CC:04:EA:31:98</td>
+            </tr>
+            <tr>
+              <td onclick="click1('02:FC:F8:CC:04:EA:39:33');">02:FC:F8:CC:04:EA:39:33</td>
+            </tr>   
+            <tr>
+              <td onclick="click1('02:FC:F8:CC:04:EA:39:33');">02:FC:F8:CC:04:E0:30:28</td>
+            </tr> 
+          </table>
+        </div>
+     </div>
+     
+     <div class="w3-col m4">
+         <div class="w3-margin-left w3-center"><h5>Link Elements<h5></div>  
+         <div class="w3-margin-left w3-small w3-center"> <span id="SelecEUI" class= "w3-center"></span></div>
+         <div class="w3-margin-left w3-small w3-center"> <span id="SelecDev" class="w3-center"></span></div>
+
+         <div class="w3-margin-left w3-container w3-center w3-margin-top"><button class="w3-button w3-black w3-text-white" style="float: center;" onclick="salida();">Adopt</div>  
+
+        
+   
+          
+     </div>    
+     
+
+     <div class="w3-col m4">
+     <div class="w3-margin-left"><h5>Available Devices on Database<h5></div>     
+        <div class="w3-container w3-small" style="margin-top:0%; width: 100%; margin-left:0%; height: 80px; overflow-y: auto">
+
+          <table class="w3-table w3-striped w3-white w3-small">
+            <tr>
+              <th>DevId/SN</td>
+            </tr>
+            <tr>
+              <td onclick="click2('200201');">200201</td>
+            </tr>
+            <tr>
+              <td onclick="click2('200202');">200202</td>
+            </tr>   
+            <tr>
+              <td onclick="click2('200203');">200203</td>
+            </tr> 
+            <tr>
+              <td onclick="click2('200913');">200913</td>
+            </tr> 
+            <tr>
+              <td onclick="click2('200956');">200956</td>
+            </tr> 
+         
+          </table>
+       </div>
+     </div>
+     
+
+    </div>
+  
+
+    </div>
+     </div>
+   <hr  style="margin-bottom:0px"> 
+    
+<div class="w3-container">
+<div class="w3-container"><h5>Thresholds</h5></div>
+
+<div class="w3-row w3-small">
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-plug w3-red;" style="font-size:24px;  color:red"></i> On V Thr</div>
+  <div class="w3-col m2 w3-container "><p><input type="range" id="OnVThr" step="1"   min="80" max="200" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OnVThr-Out"></span> Volts</p>
+  </div>
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-tachometer w3-red;" style="font-size:24px;  color:black"></i> On Cur Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="OnCurrThr" step="0.1"   min="1" max="40" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OnCurrThr-Out"></span> Amps</p>
+  </div>
+
+
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-bolt w3-red;" style="font-size:24px;  color:black"></i> On Pwr Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="OnPwrThr" step="1"   min="1" max="500" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OnPwrThr-Out"></span> W</p>
+  </div>
+
+</div>
+  <hr>
+<div class="w3-row w3-small">
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-plug w3-red;" style="font-size:24px;  color:black"></i> Off V Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="OffVThr" step="1"   min="1" max="50" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OffVThr-Out"></span> Volts</p>
+  </div>
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-tachometer w3-black;" style="font-size:24px;  color:black"></i> Off Cur Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="OffCurrThr" step="0.1"   min="0.1" max="1" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OffCurrThr-Out"></span> Amps</p>
+  </div>
+
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-bolt w3-black;" style="font-size:24px;  color:black"></i> Off Pwr Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="OffPwrThr" step="0.1"   min="0.1" max="1" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="OffPwrThr-Out"></span> W</p>
+  </div>
+
+</div>
+  <hr>
+<div class="w3-row w3-small">
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-plug w3-pink;" style="font-size:24px;  color:black"></i> Spk V Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="SpkVThr" step="10"   min="110" max="200" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="SpkVThr-Out"></span> Volts</p>
+  </div>
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-thermometer w3-black;" style="font-size:24px;  color:black"></i> Hi Temp Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="HiTempThr" step="1"   min="30" max="100" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="HiTempThr-Out"></span> Deg</p>
+  </div>
+
+
+  <div class="w3-col m2 w3-center"><i class="fa fa-lightbulb-o w3-black;" style="font-size:24px;  color:black"></i> Li Lev Thr</div>
+  <div class="w3-col m2 w3-container"><p><input type="range" id="LiLeThr" step="1"   min="10" max="100" oninput = ChangeSlider(id) class="slider"></p>
+  <p>Value: <span id="LiLeThr-Out"></span> %</p>
+  </div>  
+  
+  <hr>  
+  
+</div>
+
+
+<script>
+
+function ChangeSlider(id){
+document.getElementById(id+"-Out").innerHTML = document.getElementById(id).value
+}
+function click1(id){
+document.getElementById("SelecEUI").innerHTML=id 
+}
+function click2(id){
+document.getElementById("SelecDev").innerHTML=id 
+}
+function salida(){
+this.close();}
+
+</script>
+</body>
+</html>

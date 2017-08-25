@@ -1,0 +1,128 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+    
+
+  <script type="text/javascript">
+     google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable([
+         ['Bim', 'Measured', 'CFE', 'Historical'],
+         ['Jan-Feb17', 27,23,30],
+         ['Mar-Ap', 29, 32,30 ],
+         ['May-Jun', 28,31,33],
+         ['Jul-Ag', 32,32,31],
+         ['Sep-Oct',30,28,29],
+         ['Nov-Dec',25,29,33]
+      ]);
+
+    var options = {
+      title : 'Las Lomitas: Bi-Monthly Power Consumption',
+      vAxis: {title: 'MWh'},
+      hAxis: {title: 'Period'},
+      seriesType: 'bars',
+      series: {3: {type: 'line'}}
+    };
+
+    var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }
+  </script>
+
+</head>
+
+<body>
+<div class="w3-row">
+  <div class="w3-third w3-container">
+       <select id="searchOptions1" class="w3-select" name="option1" onchange="searchOptions1()">
+        <option value="" disabled selected>  Search Options</option>
+        <option value="1">By Lamp</option>
+        <option value="2">By Pole</option>
+        <option value="3">By Controller</option>
+        <option value="4">By CircuitID</option>
+        <option value="5">By Colony</option>         
+        <option value="6">By OperationalID</option>
+        <option value="4">By BillingID</option>       
+        <option value="4">By Gateway</option>           
+       </select>
+  </div>
+  <div class="w3-third w3-container">
+       <select id="searchOptions4" class="w3-select" name="option4" onchange="searchOptions4()">
+        <option value="" disabled selected>  Start Year</option>
+        <option value="1">2017</option>
+       </select>
+
+  </div>
+  <div class="w3-third w3-container">
+
+       <select id="searchOptions6" class="w3-select" name="option6" onchange="searchOptions6()">
+        <option value="" disabled selected>  End Year</option>
+        <option value="1">2017</option>
+       </select>
+
+  </div>
+  <div class="w3-row">
+  <div class="w3-third w3-container">
+
+       <select id="searchOptions2" class="w3-select" name="option2" onchange="searchOptions2()">
+        <option value="" disabled selected>  Search Options2</option>
+        <option value="1">All</option>
+        <option value="2">CEIBAS</option>
+        <option value="3">PUNTA DE OTERO</option>
+        <option value="4">COTO FIRENZZE</option>
+        <option value="5">PUNTA DE OTERO</option>
+        <option value="6">COTO ANTARA</option>         
+        <option value="7">RESERVA REAL</option>
+        <option value="8">SAN JUAN DE OCOTAN</option>
+        <option value="9">SOLARES</option>         
+        <option value="10">SANTILLANA</option>         
+        <option value="11">EL REAL</option>
+        </select>
+
+
+
+
+  </div>
+  <div class="w3-third w3-container">
+
+       <select id="searchOptions3" class="w3-select" name="option3" onchange="searchOptions3()">
+        <option value="" disabled selected>  Start Period</option>
+        <option value="1">Jan-Feb</option>
+        <option value="2">Mar-Apr</option>
+        <option value="3">May-Jun</option>
+        <option value="4">Jul-Aug</option>
+        <option value="5">Sep-Oct</option>
+        <option value="6">Nov-Dec</option>
+       </select>
+
+
+
+
+  </div>
+  <div class="w3-third w3-container">
+       <select id="searchOptions5" class="w3-select" name="option5" onchange="searchOptions5()">
+        <option value="" disabled selected>  End Period</option>
+        <option value="1">Jan-Feb</option>
+        <option value="2">Mar-Apr</option>
+        <option value="3">May-Jun</option>
+        <option value="4">Jul-Aug</option>
+        <option value="5">Sep-Oct</option>
+        <option value="6">Nov-Dec</option>
+       </select>
+
+
+ </div>
+
+</div>
+<div class="w3-container w3-center">
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
+</div>
+</body>
+</html>
