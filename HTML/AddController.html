@@ -1,0 +1,168 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<!--SCRIPTS DE AJAX PARA BUSQUEDA DATOS GET--> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+#slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style>    
+<script>
+
+
+</script>
+
+</head>
+
+<body>
+
+<div class="w3-row">
+     <div class="w3-col m1"> 
+      <div>&nbsp</div>
+     </div>
+
+     <div class="w3-col m3">
+        <div class="w3-margin-left w3-red w3-center w3-margin-right"><h5>Discovered Devices at NW Server<h5></div>
+        <div class="w3-container" style="margin-top:0%; width: 100%; margin-left:0%; height: 160px; overflow-y: auto">
+          
+          <table id="id01" class="w3-table w3-striped w3-white w3-medium">
+            <tr>
+              <th></th>
+              <th>Dev EUI</th>
+            </tr>
+            <tr w3-repeat="salida" id={{item}} onclick="click1(id);">
+              <td><i class={{icon}}></i></td>
+              <td><a class="w3-small">{{item}}</a></td>
+            </tr>
+
+          </table>
+        </div>
+     </div>
+     
+     <div class="w3-col m3">
+         <div class="w3-margin-left w3-center"><h5>Link Elements<h5></div>  
+
+         <div class="w3-margin-left w3-container w3-center w3-margin-top"><button class="w3-button w3-black w3-text-white" style="float: center;" onclick="salida();">Adopt</div>  
+         <br>
+         <div class="w3-margin-left w3-medium w3-center"> 
+            <i class="fa fa-hdd-o w3-text-red"></i>&nbsp<span id="SelecEUI" class="w3-center"></span>
+            <br>
+            <i class="fa fa-link w3-text-green w3-center"></i>
+            <br>
+            <i class="fa fa-hdd-o w3-text-green"></i>&nbsp<span id="SelecDev" class="w3-center">
+
+         </div> 
+  
+     </div>    
+     
+
+     <div class="w3-col m3">
+       <div class="w3-margin-left w3-margin-right w3-green w3-center" ><h5>Available Devices on Database<h5></div>     
+        <div class="w3-container" style="margin-top:0%; width: 100%; margin-left:0%; height: 160px; overflow-y: auto">
+
+          <table id="id02" class="w3-table w3-striped w3-white w3-medium">
+            <tr>
+              <th></th>
+              <th>DevId/SN</th>
+              <th>LampId</th>
+              <th>PoleId</th>
+            </tr>
+            <tr w3-repeat="salida" id={{item}} onclick="click2(id);">
+              <td><i class={{icon}}></i></td>
+              <td><a class="w3-small">{{item}}</a></td>
+              <td><a class="w3-small">{{lampid}}</a></td>
+              <td><a class="w3-small">{{poleid}}</a></td>
+            </tr>
+         
+          </table>
+        </div>
+       </div>
+     </div>
+</div>
+<hr>
+
+
+<script>
+
+function ChangeSlider(id){
+document.getElementById(id+"-Out").innerHTML = document.getElementById(id).value
+}
+function click1(id){
+document.getElementById("SelecEUI").innerHTML=id 
+}
+function click2(id){
+document.getElementById("SelecDev").innerHTML=id 
+}
+function salida(){
+this.close();}
+
+
+</script>
+
+
+<script>
+
+// Busca los datos (C58 es os DevEUI que no tienen ControllerId asociado, C18 idem Contrid)
+$.get("https://script.google.com/macros/s/AKfycbwaVqzHdzlyv0eVNoD7-xj95LxsOw_taUg630F9pvM9KIFYkmd5/exec?C58", function(data){cargaid01(data);},"text");
+$.get("https://script.google.com/macros/s/AKfycbwaVqzHdzlyv0eVNoD7-xj95LxsOw_taUg630F9pvM9KIFYkmd5/exec?C08", function(data){cargaid02(data);},"text");
+
+function cargaid01(data){
+
+  var object01=JSON.parse(data);
+  w3.displayObject("id01", object01);
+
+}
+
+function cargaid02(data){
+
+  var object01=JSON.parse(data);
+  w3.displayObject("id02", object01);
+
+}
+
+</script>
+
+
+
+</body>
+</html>
