@@ -1,0 +1,191 @@
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+#slidecontainer {
+    width: 100%;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+</style> 
+
+<script>
+
+function ChangeSlider(id){
+  document.getElementById(id+"-Out").innerHTML = document.getElementById(id).value
+}
+
+function lamp(stat){
+
+ if (stat=="on") {
+  
+ }
+ else {
+
+ }
+
+}
+
+function changeradio(valor){
+
+// window.alert("si");
+if(valor==2){document.getElementById("myDate").disabled = false;}
+else{document.getElementById("myDate").disabled = true;}
+
+}
+
+function set(){
+var mm;
+if (document.getElementById("seleccion").checked == true){mm="Immediate";}
+   else {mm=document.getElementById('myDate').value;}
+
+document.getElementById('salida').innerHTML ="Control set: " + mm
+
+}
+
+function submit(){
+  this.close()
+
+}
+
+
+
+</script>   
+
+<script>
+function myFunction() {
+window.alert("");
+    var x = document.getElementById("myDate").value;
+    document.getElementById("democal").innerHTML = x;
+}
+</script>
+
+
+</head>
+<body>
+
+
+
+
+<div class="w3-row" style="margin-left:20px">
+
+   <div class="w3-container w3-left w3-margin-left"><h5><b>Device Control</b></h5>
+    
+   </div>
+   <br>
+
+
+
+</div>
+
+<div class="w3-container w3-half" style="margin-left:20px">
+
+  
+
+   <div class="w3-container w3-left">
+      <input id="seleccion" class="w3-radio" type="radio" name="seleccion" value="1" checked onchange="changeradio(1)">
+      <label>Immediate action</label>  
+   </div>
+
+
+   <br>
+   <br>
+   <div class="w3-container w3-left">
+           <div class="w3-container w3-margin-top w3-light-grey w3-left" style="width: 240px">Lamp Status     
+               <br>
+               <button id="lampon" class="w3-button w3-black w3-text-white" style="float: center;" onclick="lamp("on");">
+                  <i class="fa fa-lightbulb-o"></i>
+               </button>
+               <button id="lampoff" class="w3-button w3-amber w3-text-white" style="float: center;" onclick="lamp("off");">
+                  <i class="fa fa-lightbulb-o"></i>
+               </button>
+
+               <br>
+               <p>Dimming</p>
+                <p><input type="range" id="Dimming" step="1"   min="0" max="100" oninput = ChangeSlider(id) class="slider"></p>
+                <p>Value: <span id="Dimming-Out"></span> %</p>
+ 
+
+          </div>
+
+    </div>
+    <br>
+    <br>
+  </div>  
+</div> 
+  <div class="w3-container w3-margin-top w3-half" style="margin-left:20px">
+
+         <div class="w3-container w3-left w3-margin-bottom">
+         <input class="w3-radio" type="radio" name="seleccion" value="2" onchange="changeradio(2)">
+         <label>Delayed Control</label>  
+         </div>
+
+        <div class="w3-container">
+          <input disabled type="datetime-local" id="myDate" value="">
+        </div>
+
+        <div id="salida" class="w3-container">&nbsp
+        </div>
+
+      <br>
+      <div class="w3-container w3-left w3-margin-top" style="width:140px">
+          <button class="w3-button w3-black w3-text-white w3-right" style="float: center;" onclick="set();">&nbsp&nbspSet&nbsp&nbsp
+      </div>  
+      <div class="w3-container w3-left w3-margin-top">
+          <button class="w3-button w3-green w3-text-white w3-block" style="float: center;" onclick="submit();">Submit
+      </div> 
+
+
+  </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
